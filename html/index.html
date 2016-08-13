@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Data Viewer prototype</title>
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="imagetoolbar" content="no" />
+<!-- 外部CSS読み込み -->
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+<!-- /ここまで -->
+<script type="text/javascript" src="js/default.js"></script>
+<script src="http://ccchart.com/js/ccchart.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+	<div id="bg">
+
+		<div id="container">
+
+			<div id="head">
+				<h2><a href="./">Data Viewer prototype</a></h2>
+			</div><!-- head end -->
+
+			<div id="contents">
+				<canvas id="graphcontents">
+				<script>
+				var chartdata = {
+				
+				  "config": {
+				    "title": "Temperature Chart",
+				    "subTitle": "Temperature sensor data",
+				    "width": 800,
+				    "height": 700,
+				    "type": "line",
+				    "lineWidth": 2,
+				    "maxY": 40,
+				    "minY": -10,
+				    "paddingTop": 80,
+				    "paddingBottom": 110,
+				    "useVal": "yes",
+				    "useMarker": "css-ring",
+				    "useCssToolTip": "yes",
+				    "markerWidth": 10,
+				    "xScaleRotate": -90,
+				    "xScaleYOffset": 55,
+				    "maxWsColLen": 18,
+				    "colorSet": 
+				          ["#DDA0DD","#3CB000"],
+				  },
+				
+				  "data": [
+				    ["DateTime","2016-08-10 14:10","2016-08-10 14:15","2016-08-10 14:20","2016-08-10 14:25","2016-08-10 14:30","2016-08-10 14:35","2016-08-10 14:40"],
+				    ["℃",25.5,25.6,27.3,28.4,27.9,26.7,25.9],
+				  ]
+				};
+				ccchart.init('graphcontents', chartdata);
+				
+				</script>
+				</canvas>
+			</div><!-- contents 終わり -->
+		</div><!-- container end -->
+
+		<div id="foot">
+			<div id="copy">Copyright (C) <script type="text/javascript">document.write(new Date().getFullYear());</script><a href="./"> Data Viewer prototype</a>. All Rights Reserved.</div><!-- copy -->
+		</div><!-- foot end -->
+
+	</div><!-- bg end -->
+
+</body>
+</html>
