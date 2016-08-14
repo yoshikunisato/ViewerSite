@@ -1,5 +1,10 @@
 // チャート準備
 $(document).ready(function() {
+	// 現在の日付 (YYYY-MM-DD形式)
+	var today = new Date();
+	var reqdate = today.getFullYear()+'-'+("0"+(today.getMonth()+1)).slice(-2)+'-'+	("0"+today.getDate()).slice(-2);
+
+	// AJAXでチャートデータを取得する
 	$.ajax({
 	    // リクエストメソッド(GET,POST,PUT,DELETEなど)
 		type : "POST",
@@ -8,9 +13,9 @@ $(document).ready(function() {
 		dataType : 'json',
 	    // リクエストURL
 		url : "/",
-	    // サーバに送信するデータ(name: value)
+	    // サーバに送信するパラメータ(name: value)
 	    data: {
-	    	dateTime: "2016-08-10",
+	    	dateTime: reqdate,
 	    },
 	}).done(function(result) {
 	    // 成功時処理
