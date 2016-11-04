@@ -50,7 +50,6 @@ body{
 /*■基本レイアウト*/
 #bg{
 	width:820px;
-	background:url(img/bg_con.jpg) repeat-y;
 	text-align:center;
 	}
 #container{
@@ -121,7 +120,6 @@ body{
 	}
 #foot{
 	clear:left;
-	background:url(img/bg_foot.gif) no-repeat;
 	width:820px;
 	height:50px;
 	}
@@ -171,7 +169,6 @@ body{
 	font-size:12px;
 	}
 #top div#top_up div#right div#info{
-	background:url(img/top/bg_info.gif) no-repeat;
 	width:360px;
 	height:200px;
 	padding:1px 1px 0px 1px;
@@ -218,7 +215,6 @@ body{
 /***その他のページ***/
 #other_page{}
 #other_page h3{
-	background:url(img/bg_h3.jpg) no-repeat;
 	font-size:18px;
 	line-height:52px;
 	height:52px;
@@ -285,7 +281,6 @@ body{
 	}
 #tbl_setA th{
 	border:#666666 solid 1px;
-	background:url(img/bg_th_a.gif);
 	padding:6px;
 	color:#CCCCCC;
 	text-align:center;
